@@ -1,19 +1,16 @@
 <hr>
-<div align="center">
-  <h1 align="center">
+<div>
+  <h1>
     snowpack-plugin-mdx
   </h1>
+  <blockquote>Use the <a href="https://github.com/mdx-js/mdx/tree/master/packages/mdx">MDX compiler</a> to build `.mdx` and `.md` files in Snowpack</blockquote>
+  <pre>npm i -D snowpack-plugin-mdx</pre>
+
 </div>
 
-<p align="center">
-  <a href="https://bundlephobia.com/result?p=snowpack-plugin-mdx">
-    <img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
-  </a>
+<p>
   <a aria-label="Types" href="https://www.npmjs.com/package/snowpack-plugin-mdx">
     <img alt="Types" src="https://img.shields.io/npm/types/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
-  </a>
-  <a aria-label="Code coverage report" href="https://codecov.io/gh/jaredjbarnes/snowpack-plugin-mdx">
-    <img alt="Code coverage" src="https://img.shields.io/codecov/c/gh/jaredjbarnes/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
   </a>
   <a aria-label="Build status" href="https://travis-ci.com/jaredjbarnes/snowpack-plugin-mdx">
     <img alt="Build status" src="https://img.shields.io/travis/com/jaredjbarnes/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
@@ -25,19 +22,51 @@
     <img alt="MIT License" src="https://img.shields.io/npm/l/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
   </a>
 </p>
-
-<pre align="center">npm i snowpack-plugin-mdx</pre>
 <hr>
 
-Use the MDX compiler to build `.mdx` and `.md` files in Snowpack
-
-## Quick Start
+## Quick start
 
 ```js
-import _ from 'snowpack-plugin-mdx'
+// snowpack.config.json
+{
+  "plugins": [["snowpack-plugin-mdx", { /* see "Plugin Options" below */}]]
+}
 ```
 
-## API
+#### Default Build Script
+
+```js
+{
+  // Matches all ".mdx" and ".md" files
+  "scripts": {"build:mdx,md": "snowpack-plugin-mdx"}
+}
+```
+
+You can override this by setting your own `"snowpack-plugin-mdx"` build script.
+
+#### Plugin Options
+
+```typescript
+interface SnowpackPluginMdxOptions {
+  /**
+   * These options are passed directly to babel.transformAsync()
+   */
+  babelOptions: TransformOptions
+  /**
+   * These options are passed directly to the MDX compiler
+   */
+  mdxOptions: Record<string, any>
+  /**
+   * Override the default renderer
+   *
+   * @default `
+   *   import * as React from 'react'
+   *   import { mdx } from '@mdx-js/react'
+   * `
+   */
+  renderer: string
+}
+```
 
 ## LICENSE
 

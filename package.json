@@ -8,11 +8,14 @@
   "license": "MIT",
   "description": "Use the MDX compiler to build `.mdx` and `.md` files in Snowpack",
   "keywords": [
-    "snowpack plugin mdx"
+    "snowpack plugin mdx",
+    "snowpack plugin",
+    "snowpack",
+    "mdx",
+    "snowpack mdx"
   ],
   "main": "dist/main/index.js",
   "module": "dist/module/index.js",
-  "unpkg": "dist/umd/snowpack-plugin-mdx.js",
   "source": "src/index.ts",
   "types": "types/index.d.ts",
   "exports": {
@@ -20,7 +23,6 @@
       "browser": "./dist/module/index.js",
       "import": "./dist/esm/index.mjs",
       "require": "./dist/main/index.js",
-      "umd": "./dist/umd/snowpack-plugin-mdx.js",
       "source": "./src/index.ts",
       "types": "./types/index.d.ts",
       "default": "./dist/main/index.js"
@@ -126,6 +128,9 @@
     "standard-version": "latest",
     "typescript": "latest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/core": "^7.10.5",
+    "@mdx-js/mdx": "^1.6.14"
+  },
   "peerDependencies": {}
 }
