@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/jaredLunde/snowpack-plugin-mdx/compare/v0.1.4...v0.2.0) (2020-07-24)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** @mdx-js/mdx and @mdx-js/react are now peer dependencies
+
+- **deps:** makes mdx a peer dependency ([723aa27](https://github.com/jaredLunde/snowpack-plugin-mdx/commit/723aa27df224f09cd3b41a1b8792675cad33f66b))
+
 ### [0.1.4](https://github.com/jaredLunde/snowpack-plugin-mdx/compare/v0.1.3...v0.1.4) (2020-07-24)
 
 ### [0.1.3](https://github.com/jaredLunde/snowpack-plugin-mdx/compare/v0.1.2...v0.1.3) (2020-07-24)
