@@ -120,6 +120,8 @@
     "@babel/preset-react": "^7.10.4",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@mdx-js/mdx": "^1.6.14",
+    "@mdx-js/react": "^1.6.14",
     "@types/jest": "latest",
     "babel-jest": "latest",
     "cli-confirm": "latest",
@@ -136,9 +138,9 @@
   },
   "dependencies": {
     "@babel/core": "^7.10.5",
-    "@mdx-js/mdx": "^1.6.14",
-    "@rollup/pluginutils": "^3.1.0",
-    "rollup-pluginutils": "^2.8.2"
+    "@rollup/pluginutils": "^3.1.0"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "@mdx-js/mdx": ">=1.6"
+  }
 }
