@@ -1,1 +1,3 @@
-module.exports = require('lundle').babelConfig('test')
+module.exports = {
+  presets: [['@babel/env', {targets: {node: 'current'}}], '@babel/typescript'],
+}

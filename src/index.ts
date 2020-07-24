@@ -42,6 +42,7 @@ module.exports = function plugin(
       const transformOptions = config?.options
       const {code: transpiled} =
         (await babel.transformAsync(code, transformOptions)) || {}
+
       return {
         // Future
         '.js': transpiled,
