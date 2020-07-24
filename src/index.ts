@@ -3,7 +3,7 @@ import path from 'path'
 import * as babel from '@babel/core'
 import type {TransformOptions} from '@babel/core'
 // @ts-ignore
-import * as mdx from '@mdx-js/mdx'
+import mdx from '@mdx-js/mdx'
 
 const ext = /\.md$|\.mdx$/
 const DEFAULT_RENDERER = `
