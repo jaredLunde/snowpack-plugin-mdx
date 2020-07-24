@@ -46,27 +46,35 @@ You can override this by setting your own `"snowpack-plugin-mdx"` build script.
 
 #### Plugin Options
 
-```typescript
+````typescript
 interface SnowpackPluginMdxOptions {
+  /**
+   * Includes only the  specified paths
+   */
+  include?: string[]
+  /**
+   * Excludes the specified paths
+   */
+  exclude?: string[]
   /**
    * These options are passed directly to babel.transformAsync()
    */
-  babelOptions: TransformOptions
+  babelOptions?: TransformOptions
   /**
    * These options are passed directly to the MDX compiler
    */
-  mdxOptions: Record<string, any>
+  mdxOptions?: Record<string, any>
   /**
    * Override the default renderer
    *
-   * @default `
+   * @default ```js
    *   import * as React from 'react'
-   *   import { mdx } from '@mdx-js/react'
-   * `
+   *   import { mdx } from '＠mdx-js/react'
+   * ```
    */
-  renderer: string
+  renderer?: string
 }
-```
+````
 
 ## LICENSE
 

@@ -2,6 +2,7 @@
 import path from 'path'
 import * as babel from '@babel/core'
 import type {TransformOptions} from '@babel/core'
+import {createFilter} from 'rollup-pluginutils'
 // @ts-ignore
 import mdx from '@mdx-js/mdx'
 
@@ -15,10 +16,17 @@ module.exports = function plugin(
   _: any,
   pluginOptions: SnowpackPluginMdxOptions
 ) {
+  const filter = createFilter(pluginOptions.include, pluginOptions.exclude)
+
   return {
+    name: 'snowpack-plugin-mdx',
+    // future
+    input: ['.md', '.mdx'],
+    output: ['.js'],
+    // legacy
     defaultBuildScript: 'build:mdx,md',
     async build({contents, filePath}: {contents: string; filePath: string}) {
-      if (!ext.test(filePath)) {
+      if (!ext.test(filePath) || !filter(filePath)) {
         return null
       }
 
@@ -34,20 +42,33 @@ module.exports = function plugin(
       const transformOptions = config?.options
       const {code: transpiled} =
         (await babel.transformAsync(code, transformOptions)) || {}
-      return {result: transpiled}
+      return {
+        // Future
+        '.js': transpiled,
+        // Legacy
+        result: transpiled,
+      }
     },
   }
 }
 
 export interface SnowpackPluginMdxOptions {
   /**
+   * Includes only the  specified paths
+   */
+  include?: string[]
+  /**
+   * Excludes the specified paths
+   */
+  exclude?: string[]
+  /**
    * These options are passed directly to babel.transformAsync()
    */
-  babelOptions: TransformOptions
+  babelOptions?: TransformOptions
   /**
    * These options are passed directly to the MDX compiler
    */
-  mdxOptions: Record<string, any>
+  mdxOptions?: Record<string, any>
   /**
    * Override the default renderer
    *
@@ -56,5 +77,5 @@ export interface SnowpackPluginMdxOptions {
    *   import { mdx } from '＠mdx-js/react'
    * ```
    */
-  renderer: string
+  renderer?: string
 }
