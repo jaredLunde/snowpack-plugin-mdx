@@ -2,7 +2,7 @@
 import path from 'path'
 import * as babel from '@babel/core'
 import type {TransformOptions} from '@babel/core'
-import {createFilter} from 'rollup-pluginutils'
+import {createFilter} from '@rollup/pluginutils'
 // @ts-ignore
 import mdx from '@mdx-js/mdx'
 
