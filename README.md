@@ -12,8 +12,8 @@
   <a aria-label="Types" href="https://www.npmjs.com/package/snowpack-plugin-mdx">
     <img alt="Types" src="https://img.shields.io/npm/types/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
   </a>
-  <a aria-label="Build status" href="https://travis-ci.com/jaredjbarnes/snowpack-plugin-mdx">
-    <img alt="Build status" src="https://img.shields.io/travis/com/jaredjbarnes/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
+  <a aria-label="Build status" href="https://travis-ci.com/jaredLunde/snowpack-plugin-mdx">
+    <img alt="Build status" src="https://img.shields.io/travis/com/jaredLunde/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">
   </a>
   <a aria-label="NPM version" href="https://www.npmjs.com/package/snowpack-plugin-mdx">
     <img alt="NPM Version" src="https://img.shields.io/npm/v/snowpack-plugin-mdx?style=for-the-badge&labelColor=24292e">

@@ -1,9 +1,9 @@
 {
   "name": "snowpack-plugin-mdx",
   "version": "0.1.1",
-  "homepage": "https://github.com/jaredjbarnes/snowpack-plugin-mdx#readme",
-  "repository": "github:jaredjbarnes/snowpack-plugin-mdx",
-  "bugs": "https://github.com/jaredjbarnes/snowpack-plugin-mdx/issues",
+  "homepage": "https://github.com/jaredLunde/snowpack-plugin-mdx#readme",
+  "repository": "github:jaredLunde/snowpack-plugin-mdx",
+  "bugs": "https://github.com/jaredLunde/snowpack-plugin-mdx/issues",
   "author": "Jared Lunde <jared.lunde@gmail.com> (https://jaredLunde.com)",
   "license": "MIT",
   "description": "Use the MDX compiler to build `.mdx` and `.md` files in Snowpack",
