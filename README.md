@@ -3,7 +3,7 @@
   <h1>
     snowpack-plugin-mdx
   </h1>
-  <blockquote>Use the <a href="https://github.com/mdx-js/mdx/tree/master/packages/mdx">MDX compiler</a> to build `.mdx` and `.md` files in Snowpack</blockquote>
+  <blockquote>Use the <a href="https://github.com/mdx-js/mdx/tree/master/packages/mdx">MDX compiler</a> to build <code>.mdx</code> and <code>.md</code> files in Snowpack</blockquote>
   <pre>npm i -D snowpack-plugin-mdx</pre>
 
 </div>
