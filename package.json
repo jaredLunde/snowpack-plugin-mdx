@@ -1,6 +1,6 @@
 {
   "name": "snowpack-plugin-mdx",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/jaredLunde/snowpack-plugin-mdx#readme",
   "repository": "github:jaredLunde/snowpack-plugin-mdx",
   "bugs": "https://github.com/jaredLunde/snowpack-plugin-mdx/issues",
