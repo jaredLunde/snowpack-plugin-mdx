@@ -60,7 +60,7 @@ interface SnowpackPluginMdxOptions {
    * Override the default renderer
    *
    * @default ```js
-   *   import * as React from 'react'
+   *   import React from 'react'
    *   import { mdx } from '＠mdx-js/react'
    * ```
    */

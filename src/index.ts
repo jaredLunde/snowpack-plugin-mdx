@@ -9,7 +9,7 @@ import mdx from '@mdx-js/mdx'
 
 const ext = /\.md$|\.mdx$/
 const DEFAULT_RENDERER = `
-import * as React from 'react'
+import React from 'react'
 import { mdx } from '@mdx-js/react'
 `
 
