@@ -11,7 +11,7 @@ describe('snowpack-plugin-mdx', () => {
       {},
       {babelOptions: {babelrc: false, presets: ['@babel/env', '@babel/react']}}
     )
-    const result = await plugin.build({contents, filePath})
+    const result = await plugin.load({contents, filePath})
     expect(result['.js']).toMatchSnapshot('.js')
     expect(result.result).toMatchSnapshot('result')
   })
@@ -23,7 +23,7 @@ describe('snowpack-plugin-mdx', () => {
       {},
       {babelOptions: {babelrc: false, presets: ['@babel/env', '@babel/react']}}
     )
-    const result = await plugin.build({contents, filePath})
+    const result = await plugin.load({contents, filePath})
     expect(result['.js']).toMatchSnapshot('.js')
     expect(result.result).toMatchSnapshot('result')
   })
@@ -38,7 +38,7 @@ describe('snowpack-plugin-mdx', () => {
         babelOptions: {babelrc: false, presets: ['@babel/env', '@babel/react']},
       }
     )
-    const result = await plugin.build({contents, filePath})
+    const result = await plugin.load({contents, filePath})
     expect(result).toBeNull()
   })
 
@@ -52,7 +52,7 @@ describe('snowpack-plugin-mdx', () => {
         babelOptions: {babelrc: false, presets: ['@babel/env', '@babel/react']},
       }
     )
-    const result = await plugin.build({contents, filePath})
+    const result = await plugin.load({contents, filePath})
     expect(result).not.toBeNull()
   })
 
@@ -66,7 +66,7 @@ describe('snowpack-plugin-mdx', () => {
         babelOptions: {babelrc: false, presets: ['@babel/env', '@babel/react']},
       }
     )
-    const result = await plugin.build({contents, filePath})
+    const result = await plugin.load({contents, filePath})
     expect(result).toBeNull()
   })
 
@@ -86,7 +86,7 @@ describe('snowpack-plugin-mdx', () => {
         },
       }
     )
-    const result = await plugin.build({contents, filePath})
+    const result = await plugin.load({contents, filePath})
     expect(result.result).toMatchSnapshot('preact')
   })
 })

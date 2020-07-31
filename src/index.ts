@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import path from 'path'
+import {promises as fs} from 'fs'
 import * as babel from '@babel/core'
 import type {TransformOptions} from '@babel/core'
 import {createFilter} from '@rollup/pluginutils'
@@ -20,16 +21,15 @@ module.exports = function plugin(
 
   return {
     name: 'snowpack-plugin-mdx',
-    // future
-    input: ['.md', '.mdx'],
-    output: ['.js'],
-    // legacy
-    defaultBuildScript: 'build:mdx,md',
-    async build({contents, filePath}: {contents: string; filePath: string}) {
+    resolve: {
+      input: ['.md', '.mdx'],
+      output: ['.js'],
+    },
+    async load({filePath}: {filePath: string}) {
       if (!ext.test(filePath) || !filter(filePath)) {
         return null
       }
-
+      const contents = await fs.readFile(filePath, 'utf-8')
       const mdxResult = await mdx(contents, {
         filepath: path.resolve(filePath),
         ...pluginOptions.mdxOptions,
@@ -44,10 +44,7 @@ module.exports = function plugin(
         (await babel.transformAsync(code, transformOptions)) || {}
 
       return {
-        // Future
         '.js': transpiled,
-        // Legacy
-        result: transpiled,
       }
     },
   }

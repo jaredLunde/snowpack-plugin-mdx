@@ -32,20 +32,9 @@
 ```js
 // snowpack.config.json
 {
-  "plugins": [["snowpack-plugin-mdx", { /* see "Plugin Options" below */}]]
+  "plugins": [["snowpack-plugin-mdx", { /* see "Plugin Options" below */ }]]
 }
 ```
-
-#### Default Build Script
-
-```js
-{
-  // Matches all ".mdx" and ".md" files
-  "scripts": {"build:mdx,md": "snowpack-plugin-mdx"}
-}
-```
-
-You can override this by setting your own `"snowpack-plugin-mdx"` build script.
 
 #### Plugin Options
 
