@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/jaredLunde/snowpack-plugin-mdx/compare/v0.2.0...v0.3.0) (2020-07-31)
+
+### ⚠ BREAKING CHANGES
+
+- Drop support for snowpack <2.7.0
+
+### Features
+
+- add support for snowpack >=2.7.0 ([5b63de6](https://github.com/jaredLunde/snowpack-plugin-mdx/commit/5b63de6ed2bc6175fd0ea231626093c31d822bc9))
+
 ## [0.2.0](https://github.com/jaredLunde/snowpack-plugin-mdx/compare/v0.1.4...v0.2.0) (2020-07-24)
 
 ### ⚠ BREAKING CHANGES
