@@ -13,7 +13,6 @@ describe('snowpack-plugin-mdx', () => {
     )
     const result = await plugin.load({contents, filePath})
     expect(result['.js']).toMatchSnapshot('.js')
-    expect(result.result).toMatchSnapshot('result')
   })
 
   it('should compile .mdx files', async () => {
@@ -25,7 +24,6 @@ describe('snowpack-plugin-mdx', () => {
     )
     const result = await plugin.load({contents, filePath})
     expect(result['.js']).toMatchSnapshot('.js')
-    expect(result.result).toMatchSnapshot('result')
   })
 
   it('should exclude files', async () => {
@@ -87,6 +85,6 @@ describe('snowpack-plugin-mdx', () => {
       }
     )
     const result = await plugin.load({contents, filePath})
-    expect(result.result).toMatchSnapshot('preact')
+    expect(result['.js']).toMatchSnapshot('preact')
   })
 })
